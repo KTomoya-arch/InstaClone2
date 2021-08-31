@@ -1,0 +1,15 @@
+current directory: /Users/katotomoya/Documents/InstagramClone/vendor/bundle/ruby/2.6.0/gems/bindex-0.8.1/ext/skiptrace
+/Users/katotomoya/.rbenv/versions/2.6.4/bin/ruby -I /Users/katotomoya/.rbenv/versions/2.6.4/lib/ruby/2.6.0 -r ./siteconf20210901-65674-3dwa6d.rb extconf.rb
+creating Makefile
+
+current directory: /Users/katotomoya/Documents/InstagramClone/vendor/bundle/ruby/2.6.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" clean
+
+current directory: /Users/katotomoya/Documents/InstagramClone/vendor/bundle/ruby/2.6.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR="
+compiling cruby.c
+linking shared-object skiptrace/internal/cruby.bundle
+
+current directory: /Users/katotomoya/Documents/InstagramClone/vendor/bundle/ruby/2.6.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 cruby.bundle ./.gem.20210901-65674-1t64tdt/skiptrace/internal
