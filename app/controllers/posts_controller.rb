@@ -2,6 +2,7 @@ class PostsController < ApplicationController
   before_action :require_login, only: %i[new create edit update destroy]
   def index
     @posts = Post.all.includes(:user).page(params[:page])
+  end
 
   def new
     @post = Post.new
@@ -33,6 +34,8 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+    @comments = @post.comments.order(created_at: :desc)
+    @comment = Comment.new
   end
 
   def destroy

@@ -12,6 +12,10 @@ ja:
       post:
         images: '画像'
         body: '本文'
+      comment:
+        body: 'コメント'
+        user_id: 'ユーザー'
+        post_id: '投稿'
 
   attributes:
     created_at: '作成日時'
