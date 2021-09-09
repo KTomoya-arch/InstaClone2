@@ -18,6 +18,8 @@ class Like < ApplicationRecord
   belongs_to :post
 
   # likeモデルにおいてuser_idはpost_idが同じであれば異なっていなければならないということ
+  # 1つの投稿に同じユーザーが複数いいねできませんよということ
+  # DBに対してUNIQUNESSとしているのでモデルにも設定すべきという理屈
   # post_idが異なれば問題はないというのがscopeの意味
   validates :user_id, uniqueness: { scope: :post_id }
 end
