@@ -13,9 +13,13 @@
 #  index_relationships_on_followed_id_and_follower_id  (followed_id,follower_id) UNIQUE
 #
 class Relationship < ApplicationRecord
-  belongs_to :followed, class_name: 'User'
+  # belongs_to :user => user_id == @user.idとかきたくなるが、
+  # follower_id == @user.id　followed_id == @user.idとしたいはず
+  # belongs_to :follower←follower_idとfollowerクラスを結びつけるが
+  # followerクラスは実体がないのでUserクラスと結びつけるよという意味
   belongs_to :follower, class_name: 'User'
-  validates :followed_id, presence: true
+  belongs_to :followed, class_name: 'User'
   validates :follower_id, presence: true
-  validates :follower_id, uniqueness: {scope: :followed_id}
+  validates :followed_id, presence: true
+  validates :follower_id, uniqueness: { scope: :followed_id }
 end
